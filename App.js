@@ -1,24 +1,21 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 import Inicio from './screens/Inicio';
-import RegisterClient from './screens/RegisterClient';
 import LoginClient from './screens/LoginClient';
+import RegisterClient from './screens/RegisterClient';
+import Home from './screens/Home';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <LoginClient></LoginClient>
-      {/* <RegisterClient></RegisterClient> */}
-      
-    </View>
-  );
-}
+import { createAppContainer, createStackNavigator,createDrawerNavigator } from 'react-navigation';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const Routes = createAppContainer(
+  createStackNavigator({
+    TelaInicial: Inicio,
+    LoginClient:LoginClient,
+    RegisterClient:RegisterClient,
+  }),
+  // createDrawerNavigator({
+  //   Home: {
+  //     screen: Home,
+  //   }
+  // })
+);
+
+export default Routes;

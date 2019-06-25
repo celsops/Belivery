@@ -33,6 +33,7 @@ export default class LoginClient extends Component {
       // ...
     });
     console.log("Login realizado com sucesso!!");
+    this.props.navigation.navigate('Home')
   }
   render() {
     return (

@@ -4,28 +4,28 @@ import {
   StyleSheet,
   View,
   Image,
-  Dimensions,
-  Button,
+  Text,
 } from 'react-native';
+import {createDrawerNavigator,createAppContainer} from 'react-navigation';
 // import console = require('console');
 
-const width = Dimensions.get('screen').width;
-
-export default class Inicio extends Component {
-
+export default class Home extends Component {
+  // static navigationOptions = {
+  //     drawerLabel: 'Home',
+  // };
   render() {
     return (
       <View style={styles.container}>
         <Image source={require("../img/belivery-logo.png")}></Image>
         <View style={styles.form}>
-            <Button title="Ja tenho conta" onPress={() => this.props.navigation.navigate('LoginClient')}/>
-
-          <Button title="Cadastrar-se" onPress={ () => this.props.navigation.navigate('RegisterClient') }/>
+            <Text>Bem-vindo ao Belivery</Text>
         </View>
       </View>
     );
   }
 }
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -36,9 +36,6 @@ const styles = StyleSheet.create({
   titulo: {
     fontWeight: 'bold',
     fontSize: 26,
-  },
-  form: {
-    width: width * 0.8
   },
   input: {
     height: 40,
