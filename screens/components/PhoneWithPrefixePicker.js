@@ -17,7 +17,7 @@ export default class PhoneWithPrefixePicker extends Component{
   }
 
   getCompletePhone(){
-      return this.state.choosedPrefixe + this.state.cellphonesphoneNumber;
+      return this.state.choosedPrefixe + this.state.cellphoneNumber;
   }
 
   formataLabelApresentacao(label){
